@@ -19,7 +19,7 @@ event http_header(c: connection, is_orig: bool, name: string, value: string)
 }
 event zeek_done() 
 {
-    for (source_ip in agent_table) 
+    for (source_ip in table1) 
     {
         if (|table1[source_ip]| >= 3) 
         {
